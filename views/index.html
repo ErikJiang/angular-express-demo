@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>angular-express-demo</title>
+    <base href="/"/>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+      <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+      <script type="text/javascript" src="/bower_components/angular-route/angular-route.js"></script>
+      <script type="text/javascript" src="/javascripts/angular/app.js"></script>
+      <script type="text/javascript" src="/javascripts/angular/controllers.js"></script>
+      <script type="text/javascript" src="/javascripts/angular/directives.js"></script>
+      <script type="text/javascript" src="/javascripts/angular/filters.js"></script>
+      <script type="text/javascript" src="/javascripts/angular/services.js"></script>
+  </head>
+  <body ng-app="seedApp">
+    <nav class="navbar navbar-default">
+        <div class="container" ng-controller="navMenuCrtl">
+            <ul class="nav nav-tabs nav-justified nav-style">
+                <li><a href="/" class="home" ng-click="setMenuBtn($event)">主页</a></li>
+                <li><a href="/" class="editer" ng-click="setMenuBtn($event)">内联文本编辑器</a></li>
+                <li><a href="/test" class="order" ng-click="setMenuBtn($event)">订单表单</a></li>
+                <li><a href="#" class="search" ng-click="setMenuBtn($event)">即时搜索</a></li>
+                <li><a href="#" class="network" ng-click="setMenuBtn($event)">切换网络</a></li>
+                <li><a href="#" class="about" ng-click="setMenuBtn($event)">关于</a></li>
+            </ul>
+
+            <div class="jumbotron theme-color text-center">
+                <h2>{{ notes.title }}</h2>
+                <small>{{ notes.content }}</small>
+                <div>
+                    <a class="btn btn-default" href="https://github.com/JiangInk/angular-express-demo.git">
+                    <span class="glyphicon glyphicon-link"></span>
+                    Github URL
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="col-md-12">
+        <!--<div ng-controller="navMenuCrtl">-->
+            <!--<ul class="nav nav-tabs nav-justified nav-style">-->
+                <!--<li><a href="/" class="home" ng-click="setMenuBtn($event)">主页</a></li>-->
+                <!--<li><a href="/" class="editer" ng-click="setMenuBtn($event)">内联文本编辑器</a></li>-->
+                <!--<li><a href="/test" class="order" ng-click="setMenuBtn($event)">订单表单</a></li>-->
+                <!--<li><a href="#" class="search" ng-click="setMenuBtn($event)">即时搜索</a></li>-->
+                <!--<li><a href="#" class="network" ng-click="setMenuBtn($event)">切换网络</a></li>-->
+                <!--<li><a href="#" class="about" ng-click="setMenuBtn($event)">关于</a></li>-->
+            <!--</ul>-->
+
+            <!--<div class="jumbotron theme-color text-center">-->
+                <!--<h1>{{ notes.title }}</h1>-->
+                <!--<small>{{ notes.content }}</small>-->
+                <!--<div>-->
+                    <!--<a class="btn btn-default" href="https://github.com/JiangInk/angular-express-demo.git">-->
+                        <!--<span class="glyphicon glyphicon-link"></span>-->
+                        <!--Github URL-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div ng-view></div>
+    </div>
+
+  </body>
+</html>
