@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "欢迎来到 Angular & Express 实例",
-    "content": "这里将会展示四个实例，您可以通过阅读或者修改源码来学习到如何进行 Angular & Express 项目的开发，还在犹豫什么！奋斗吧！少年！<br/>［ 注：本实例工程基于: <a href=\"https://github.com/JiangInk/angular-express-seed.git\">angular-express-seed</a> ］"
+    "content": "这里将会展示四个实例，您可以通过阅读或者修改源码来学习到如何进行 Angular & Express 项目的开发，还在犹豫什么！奋斗吧！少年！<br/>［ 注：本实例工程基于: <a  class=\"label label-default\" href=\"https://github.com/JiangInk/angular-express-seed.git\">angular-express-seed</a> ］"
   },
   "editer": {
     "title": "实例一: 内联文本编辑器",

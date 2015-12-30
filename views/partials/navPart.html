@@ -1,0 +1,35 @@
+<div ng-controller="navMenuCrtl">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/" name="home" ng-click="setMenuBtn($event)">
+                    <img src="/images/favicon.ico" class="img-size center-block" alt="Brand"/>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/" name="home" ng-click="setMenuBtn($event)">主页</a></li>
+                    <li><a href="/editor" name="editer" ng-click="setMenuBtn($event)">内联文本编辑器</a></li>
+                    <li><a href="/order" name="order" ng-click="setMenuBtn($event)">订单表单</a></li>
+                    <li><a href="/search" name="search" ng-click="setMenuBtn($event)">即时搜索</a></li>
+                    <li><a href="/network" name="network" ng-click="setMenuBtn($event)">切换网络</a></li>
+                    <li><a href="/about" name="about" ng-click="setMenuBtn($event)">关于</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="https://github.com/JiangInk/angular-express-demo.git">
+                            <span class="glyphicon glyphicon-link"></span>
+                            Github Link
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="col-md-12">
+        <header class="jumbotron theme-color text-center">
+            <h2>{{ title }}</h2>
+            <small ng-bind-html="content"></small>
+        </header>
+    </div>
+</div>

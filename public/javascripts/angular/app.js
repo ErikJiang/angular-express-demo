@@ -9,12 +9,26 @@ var app = angular.module('seedApp', [
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
         when('/', {
-            templateUrl: 'partials/panelFunc',
-            controller: 'panelCtrl'
+            templateUrl: 'partials/homePart'
         }).
-        when('/test', {
-            templateUrl: 'partials/testFunc',
-            controller: 'testCtrl'
+        when('/about', {
+            templateUrl: 'partials/aboutPart'
+        }).
+        when('/editor', {
+            templateUrl: 'partials/editorFunc',
+            controller: 'editorCtrl'
+        }).
+        when('/order', {
+            templateUrl: 'partials/orderFunc',
+            controller: 'orderCtrl'
+        }).
+        when('/search', {
+            templateUrl: 'partials/searchFunc',
+            controller: 'searchCtrl'
+        }).
+        when('/network', {
+            templateUrl: 'partials/networkFunc',
+            controller: 'networkCtrl'
         }).
         otherwise({
             redirectTo: '/'
