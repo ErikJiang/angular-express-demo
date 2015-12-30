@@ -4,44 +4,17 @@
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a, a:visited {
-    outline:none;
-    color:#389dc1;
+.img-size {
+    max-width: 100%;
+    height: 100%;
+    display: block;
 }
 
-a:hover{
-    text-decoration:none;
-}
-
-.nav-style {
-    display: inline-block;
-    margin: 60px auto 45px;
-    background-color: #5597b4;
-    /*box-shadow: 0px 1px 1px #ccc;*/
-    border-radius: 2px;
-}
-.nav-style a {
-    display: inline-block;
-    padding: 18px 30px;
-    color: #fff !important;
-    font-weight: bold;
-    font-size: 16px;
-    text-decoration: none !important;
-    line-height: 1px;
-    background-color: transparent;
-    -webkit-transition: background-color 0.25s;
-    -moz-transition: background-color 0.25s;
-    transition: background-color 0.25s;
-}
-.nav-style a:first-child {
-    border-radius: 4px 0px 0px 4px;
-}
-.nav-style a:last-child {
-    border-radius: 0px 4px 4px 0px;
-}
-
-ul.nav-style a:hover {
-    background-color: #e35885;
+header.jumbotron>small{
+    display: block;
+    max-width: 70%;
+    margin: 0px auto;
+    line-height: 20px;
 }
 
 .theme-color {

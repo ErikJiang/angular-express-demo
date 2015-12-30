@@ -2,7 +2,8 @@
 
 var app = angular.module('seedApp', [
     'ngRoute',
-    'seedControllers'
+    'demoControllers',
+    'demoServices'
 ]);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
