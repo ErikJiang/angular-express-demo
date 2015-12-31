@@ -1,4 +1,15 @@
 <% include ./bannerPart.html %>
-<div class="btn btn-info">
-    这是 内联文本编辑器 页面
+
+<!-- inline editor -->
+<div class="editZone text-center" ng-click="hideTooltip()">
+    <div class="col-md-4"></div>
+    <div class="input-group col-md-4" ng-click="$event.stopPropagation()" ng-show="showTooltip">
+        <span class="input-group-addon" id="tooltip"><span class="glyphicon glyphicon-edit"></span></span>
+        <input class="form-control" type="text" aria-describedby="tooltip" ng-model="editContent"/>
+    </div>
+    <div class="col-md-4"></div>
+    <p class="col-md-12" ng-click="toggleTooltip($event)">
+        <span class="glyphicon glyphicon-pencil"></span>
+        {{ editContent }}
+    </p>
 </div>

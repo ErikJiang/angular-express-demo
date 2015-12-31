@@ -17,6 +17,23 @@ header.jumbotron>small{
     line-height: 20px;
 }
 
+
+/*-------------------------
+	The edit tooltip
+--------------------------*/
+
+.editZone {
+    height: 300px;
+}
+.editZone > p {
+    font-size:22px;
+    font-weight:bold;
+    color:#6d8088;
+    height: 30px;
+    cursor:default;
+}
+
+
 .theme-color {
     color: #ffffff;
     background-color: #269abc;

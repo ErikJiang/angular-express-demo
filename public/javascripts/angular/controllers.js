@@ -64,6 +64,16 @@ demoControllers.controller('editorCtrl', ['$scope', '$http', '$sce',
             $scope.title = data.editor.title;
             $scope.content = $sce.trustAsHtml(data.editor.content);
         });
+
+        $scope.editContent = 'Hello World!';
+        $scope.showTooltip = false;
+        $scope.hideTooltip = function() {
+            $scope.showTooltip = false;
+        };
+        $scope.toggleTooltip = function(evt) {
+            evt.stopPropagation();
+            $scope.showTooltip = !$scope.showTooltip;
+        };
     }
 ]);
 
