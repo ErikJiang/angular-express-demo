@@ -40,24 +40,57 @@ demoControllers.controller('panelCtrl', ['$scope', function($scope) {
     }];
 }]);
 
-demoControllers.controller('testCtrl', ['$scope', function($scope) {
-    $scope.test = "hello! this is test page!"
-}]);
-
-demoControllers.controller('navMenuCrtl', ['$scope', '$http', '$sce',
+demoControllers.controller('homeCtrl', ['$scope', '$http', '$sce',
     function($scope, $http, $sce) {
-        $scope.active = '';
         $http.get("json/themeInfo.json").success(function(data) {
             $scope.title = data.home.title;
             $scope.content = $sce.trustAsHtml(data.home.content);
         });
-        $scope.setMenuBtn = function(evt) {
-            var elem = evt.currentTarget;
-            $scope.item = elem.getAttribute('name');
-            $http.get("json/themeInfo.json").success(function(data) {
-                $scope.title = data[$scope.item].title;
-                $scope.content = $sce.trustAsHtml(data[$scope.item].content);
-            });
-        };
     }
 ]);
+
+demoControllers.controller('aboutCtrl', ['$scope', '$http', '$sce',
+    function($scope, $http, $sce) {
+        $http.get("json/themeInfo.json").success(function(data) {
+            $scope.title = data.about.title;
+            $scope.content = $sce.trustAsHtml(data.about.content);
+        });
+    }
+]);
+
+demoControllers.controller('editorCtrl', ['$scope', '$http', '$sce',
+    function($scope, $http, $sce) {
+        $http.get("json/themeInfo.json").success(function(data) {
+            $scope.title = data.editor.title;
+            $scope.content = $sce.trustAsHtml(data.editor.content);
+        });
+    }
+]);
+
+demoControllers.controller('orderCtrl', ['$scope', '$http', '$sce',
+    function($scope, $http, $sce) {
+        $http.get("json/themeInfo.json").success(function(data) {
+            $scope.title = data.order.title;
+            $scope.content = $sce.trustAsHtml(data.order.content);
+        });
+    }
+]);
+
+demoControllers.controller('searchCtrl', ['$scope', '$http', '$sce',
+    function($scope, $http, $sce) {
+        $http.get("json/themeInfo.json").success(function(data) {
+            $scope.title = data.search.title;
+            $scope.content = $sce.trustAsHtml(data.search.content);
+        });
+    }
+]);
+
+demoControllers.controller('networkCtrl', ['$scope', '$http', '$sce',
+    function($scope, $http, $sce) {
+        $http.get("json/themeInfo.json").success(function(data) {
+            $scope.title = data.network.title;
+            $scope.content = $sce.trustAsHtml(data.network.content);
+        });
+    }
+]);
+

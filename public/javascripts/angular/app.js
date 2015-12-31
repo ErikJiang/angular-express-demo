@@ -9,25 +9,27 @@ var app = angular.module('seedApp', [
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
         when('/', {
-            templateUrl: 'partials/homePart'
+            templateUrl: 'partials/homePage',
+            controller: 'homeCtrl'
         }).
         when('/about', {
-            templateUrl: 'partials/aboutPart'
+            templateUrl: 'partials/aboutPage',
+            controller: 'aboutCtrl'
         }).
         when('/editor', {
-            templateUrl: 'partials/editorFunc',
+            templateUrl: 'partials/editorPage',
             controller: 'editorCtrl'
         }).
         when('/order', {
-            templateUrl: 'partials/orderFunc',
+            templateUrl: 'partials/orderPage',
             controller: 'orderCtrl'
         }).
         when('/search', {
-            templateUrl: 'partials/searchFunc',
+            templateUrl: 'partials/searchPage',
             controller: 'searchCtrl'
         }).
         when('/network', {
-            templateUrl: 'partials/networkFunc',
+            templateUrl: 'partials/networkPage',
             controller: 'networkCtrl'
         }).
         otherwise({

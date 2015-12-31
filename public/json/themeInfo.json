@@ -3,7 +3,7 @@
     "title": "欢迎来到 Angular & Express 实例",
     "content": "这里将会展示四个实例，您可以通过阅读或者修改源码来学习到如何进行 Angular & Express 项目的开发，还在犹豫什么！奋斗吧！少年！<br/>［ 注：本实例工程基于: <a  class=\"label label-default\" href=\"https://github.com/JiangInk/angular-express-seed.git\">angular-express-seed</a> ］"
   },
-  "editer": {
+  "editor": {
     "title": "实例一: 内联文本编辑器",
     "content": "我们会创建一个简单的内联编辑器-单击段落时会显示文本提示框。我们会使用到一种控制器，能够初始化模型，以及声明两个函数用来切换提示的可见性。控制器是常规的JavaScript函数，能自动被Angular执行。使用中，用ng-controller指令关联相关的页面。"
   },
