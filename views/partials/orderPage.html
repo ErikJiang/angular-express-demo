@@ -1,4 +1,23 @@
 <% include ./bannerPart.html %>
-<div class="btn btn-info">
-    这是 订单表单 页面
-</div>
+
+<!-- order form -->
+<form>
+    <h3>
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+        购物车
+    </h3>
+    <ul ng-repeat="service in services">
+        <li ng-click="toggleActive(service)" ng-class="{active: service.active}">
+            <div class="col-md-5">
+                <img ng-src="{{ service.url }}" alt=""/>
+            </div>
+            <div class="col-md-3"></div>
+            <p class="col-md-4 text-center">{{ service.name }}<br/>
+            <br/>{{ service.price | currency:"¥ " }}</p>
+
+        </li>
+    </ul>
+    <div class="total">
+        <span>总计：&nbsp; {{total() | currency:"RMB ¥ "}}</span>
+    </div>
+</form>

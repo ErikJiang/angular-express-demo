@@ -3,6 +3,7 @@
 var app = angular.module('seedApp', [
     'ngRoute',
     'demoControllers',
+    'demoFilters',
     'demoServices'
 ]);
 

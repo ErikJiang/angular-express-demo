@@ -1,4 +1,14 @@
 <% include ./bannerPart.html %>
-<div class="btn btn-info">
-    这是 信息搜索 页面
+
+<!-- info search -->
+<div class="search">
+    <div class="bar">
+        <input type="text" ng-model="searchString" placeholder="请输入检索内容……"/>
+    </div>
+    <ul>
+        <li ng-repeat="item in items | queryByTerms:searchString">
+            <a href="{{ item.url }}"><img ng-src="{{ item.image }}"/></a>
+            <p>{{ item.title }}</p>
+        </li>
+    </ul>
 </div>
