@@ -170,11 +170,26 @@ demoControllers.controller('searchCtrl', ['$scope', '$http', '$sce',
     }
 ]);
 
-demoControllers.controller('networkCtrl', ['$scope', '$http', '$sce',
-    function($scope, $http, $sce) {
+demoControllers.controller('networkCtrl', ['$scope', '$http', '$sce', 'instagram',
+    function($scope, $http, $sce, instagram) {
         $http.get("json/themeInfo.json").success(function(data) {
             $scope.title = data.network.title;
             $scope.content = $sce.trustAsHtml(data.network.content);
+        });
+
+        // Default layout of the app. Clicking the buttons in the toolbar
+        // changes this value.
+
+        $scope.layout = 'grid';
+
+        $scope.pics = [];
+
+        // Use the instagram service and fetch a list of the popular pics
+        instagram.fetchPopular(function(data){
+
+            // Assigning the pics array will cause the view
+            // to be automatically redrawn by Angular.
+            $scope.pics = data;
         });
     }
 ]);
